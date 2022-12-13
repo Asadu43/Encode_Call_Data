@@ -37,7 +37,7 @@ const argv = yargs.option("network", {
   .help(false)
   .version(false).argv;
 
-const DEFAULT_MNEMONIC:string = process.env.MNEMONIC || "";
+const DEFAULT_MNEMONIC: string = process.env.MNEMONIC || "";
 
 const sharedNetworkConfig: HttpNetworkUserConfig = {
   live: true,
@@ -79,11 +79,11 @@ const config: HardhatUserConfig = {
         }
       },
       {
-        version: "0.8.4",
+        version: "0.8.13",
         settings: {
           optimizer: {
             runs: 200,
-            enabled:true
+            enabled: true
           }
         }
       },

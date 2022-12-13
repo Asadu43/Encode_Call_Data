@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.13;
 
 interface IERC20 {
   function transfer(address, uint256) external;
@@ -22,7 +22,7 @@ contract AbiEncode {
     return abi.encodeWithSelector(IERC20.transfer.selector, to, amount);
   }
 
-  //   function encodeCall(address to, uint256 amount) external pure returns (bytes memory) {
-  //     return abi.encodeCall(IERC20.transfer, (to, amount));
-  //   }
+  function encodeCall(address to, uint256 amount) external pure returns (bytes memory) {
+    return abi.encodeCall(IERC20.transfer, (to, amount));
+  }
 }
